@@ -1,0 +1,25 @@
+{
+  "name": "pwa-page-brin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IIC3585-2021/pwa-page-brin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IIC3585-2021/pwa-page-brin/issues"
+  },
+  "homepage": "https://github.com/IIC3585-2021/pwa-page-brin#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2"
+  }
+}
