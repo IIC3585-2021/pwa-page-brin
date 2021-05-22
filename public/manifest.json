@@ -1,4 +1,16 @@
 {
     "name": "fakeSpotify",
-    "short_name": "Fspotify"
+    "short_name": "Fspotify",
+    "icons": [
+        {
+            "src": "images/logo192.png",
+            "sizes": "192x192",
+            "type": "images/png"
+        },
+        {
+            "src": "images/logo512.png",
+            "sizes": "512x512",
+            "type": "images/png"
+        }
+    ]
 }
