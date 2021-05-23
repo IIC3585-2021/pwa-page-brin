@@ -29,7 +29,7 @@ export default class Display extends HTMLElement {
     super();
 
     // append shadow DOM to shadow root and then clone template
-    const shadowRoot = this.attachShadow({mode: 'closed'});
+    const shadowRoot = this.attachShadow({ mode: 'closed' });
     shadowRoot.appendChild(template.content.cloneNode(true));
 
     // fill the needed info
