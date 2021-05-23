@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./stylesheets/search.css">
         <script type="module" src="../src/components/display.js"></script>
         <script src="../src/include.js"></script>
+        <script src="../src/services.js"></script>
     </head>
     <body>
         <header>
@@ -32,11 +33,11 @@
             <div class="foot-row">
                 <div class="song-info">
                     <div class="cover" style="width: 50px;padding-right: 15px;padding-top: 5px;">
-                        <img src="../images/default_album_image.png" style="width:100%">
+                        <img id="albumImage" src="../images/default_album_image.png" style="width:100%">
                     </div>
                     <div class="text_info">
-                        <p style="font-size: 15px; margin-bottom: 0;">Future Nostalgia</p>
-                        <p style="font-size: 10px; margin-top: 0;">Dua Lipa</p>
+                        <p id="trackTitle" style="font-size: 15px; margin-bottom: 0;"></p>
+                        <p id="trackArtist" style="font-size: 10px; margin-top: 0;"></p>
                     </div>
                 </div>
                 <div class="music-player">
@@ -44,8 +45,8 @@
                         <div class="timer">01:40</div>
                         <div class="btn-space">
                             <button class="btn"><i class="fa fa-step-backward" style="font-size:15px"></i></button>
-                            <button class="btn"><i class="fa fa-play-circle" style="font-size:15px"></i></button>
-                            <button class="btn"><i class="fa fa-step-forward" style="font-size:15px"></i></button>
+                            <button class="btn" onclick="play()" value="Play"><i class="fa fa-play-circle" style="font-size:15px"></i></button>
+                            <button class="btn" onclick="next()"><i class="fa fa-step-forward" style="font-size:15px"></i></button>
                         </div>
                         <div class="duration">03:04</div>
                     </div>
