@@ -1,0 +1,9 @@
+.album_info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+th, td {
+    text-align: center;
+}
