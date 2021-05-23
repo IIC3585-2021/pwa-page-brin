@@ -9,9 +9,15 @@
         <link rel="stylesheet" href="./stylesheets/master.css">
     </head>
     <body>
+        <script src="../src/include.js"></script>
 
-        HOLA!
+        <div id="full-container">
+            <div id="home-container" w3-include-html="./home.html"></div> 
+        </div>
         
+        <script>
+            includeHTML();
+        </script>
         <script src="../src/index.js" async defer></script>
     </body>
 </html>
