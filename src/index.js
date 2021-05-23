@@ -1,2 +1,5 @@
-const test = 'This is a test var';
-console.log(test);
+window.addEventListener('load', () => {
+  // document.getElementById('my-button').onclick = () => {
+  //   document.querySelector('content-display').setAttribute('title', 'Honorary Astronaut');
+  // };
+});
