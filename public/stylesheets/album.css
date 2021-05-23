@@ -6,4 +6,13 @@
 
 th, td {
     text-align: center;
+    padding-top: 7px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.first_line {
+    border-bottom: 1px solid #303030;
 }
