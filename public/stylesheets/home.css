@@ -1,0 +1,17 @@
+#home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grow {
+    flex-grow: 1;
+}
+content-display {
+    align-self: flex-start;
+}
