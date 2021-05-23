@@ -6,14 +6,55 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./stylesheets/master.css">
+        <link rel="stylesheet" href="./stylesheets/album.css">
+        <link rel="stylesheet" href="./stylesheets/search.css">
         <script type="module" src="../src/components/display.js"></script>
         <script src="../src/include.js"></script>
     </head>
     <body>
+        <header>
+            <div class="head-row">
+                <button class="btn"><i class="fa fa-home" style="font-size:30px"></i></button>
+                <button class="btn end"><i class="fa fa-search" style="font-size:25px"></i></button>
+            </div>
+        </header>
         <div id="full-container">
-            <div id="home-container" w3-include-html="./home.html"></div> 
+            <br><br>
+            <!-- <div id="html-container" w3-include-html="./home.html"></div> -->
+            <!-- <div id="html-container" w3-include-html="./album.html"></div> -->
+            <div id="html-container" w3-include-html="./search.html"></div>
+            <br><br><br>
         </div>
+
+        <footer>
+            <div class="foot-row">
+                <div class="song-info">
+                    <div class="cover" style="width: 50px;padding-right: 15px;padding-top: 5px;">
+                        <img src="../images/default_album_image.png" style="width:100%">
+                    </div>
+                    <div class="text_info">
+                        <p style="font-size: 15px; margin-bottom: 0;">Future Nostalgia</p>
+                        <p style="font-size: 10px; margin-top: 0;">Dua Lipa</p>
+                    </div>
+                </div>
+                <div class="music-player">
+                    <div class="music-btns">
+                        <div class="timer">01:40</div>
+                        <div class="btn-space">
+                            <button class="btn"><i class="fa fa-step-backward" style="font-size:15px"></i></button>
+                            <button class="btn"><i class="fa fa-play-circle" style="font-size:15px"></i></button>
+                            <button class="btn"><i class="fa fa-step-forward" style="font-size:15px"></i></button>
+                        </div>
+                        <div class="duration">03:04</div>
+                    </div>
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
         <script src="../src/index.js" async defer></script>
         <script>

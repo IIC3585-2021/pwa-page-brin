@@ -1,0 +1,18 @@
+.album_info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+th, td {
+    text-align: center;
+    padding-top: 7px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.first_line {
+    border-bottom: 1px solid #303030;
+}
