@@ -1,0 +1,36 @@
+#artist-container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#artist-header {
+    display: flex;
+    align-items: center;
+    min-height: 30%;
+    max-height: 30%;
+    width: 100%;
+}
+
+#artist-header img {
+    border-radius: 50%;
+    width: auto;
+    height: 30%;
+    margin-left: 20px;
+}
+
+#artist-header-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+#artist-header-text h1 {
+    font-size: 5rem;
+    margin: 0px 0px 0px 50px;
+}
+
+#artist-header-text p {
+    margin: 0px 0px 20px 50px;
+}

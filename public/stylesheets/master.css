@@ -1,4 +1,7 @@
 @import './home.css';
+@import './artist.css';
+@import './album.css';
+@import './search.css';
 
 html {
     background-color: white;
