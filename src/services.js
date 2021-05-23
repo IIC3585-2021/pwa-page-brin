@@ -1,5 +1,6 @@
 // var redirect_uri = "https://makeratplay.github.io/SpotifyWebAPI/"; // change this your value
-var redirect_uri = "http://127.0.0.1:5500/index.html";
+var redirect_uri = "http://127.0.0.1:5500/public/login.html";
+var main_url = "http://127.0.0.1:5500/public/index.html";
  
 
 var client_id = ""; 
@@ -116,7 +117,7 @@ function handleAuthorizationResponse(){
             refresh_token = data.refresh_token;
             localStorage.setItem("refresh_token", refresh_token);
         }
-        onPageLoad();
+        window.location.href = main_url;
     }
     else {
         console.log(this.responseText);
