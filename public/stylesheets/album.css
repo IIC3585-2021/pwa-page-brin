@@ -1,3 +1,11 @@
+#album-container {
+    background: rgb(26,11,11);
+    background: linear-gradient(180deg, rgb(26, 11, 25) 0%, rgba(24,24,24,1) 50%);
+    color: white;
+    padding: 20px;
+    flex-grow: 1;
+}
+
 .album_info {
     display: flex;
     flex-wrap: wrap;
@@ -6,4 +14,13 @@
 
 th, td {
     text-align: center;
+    padding-top: 7px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.first_line {
+    border-bottom: 1px solid #303030;
 }
