@@ -20,6 +20,14 @@ body {
     height: 100%;
 }
 
+#html-container {
+    background: rgb(26,11,11);
+    background: linear-gradient(180deg, rgba(26, 11, 25) 0%, rgba(24,24,24,1) 50%);
+    color: white;
+    padding: 20px;
+    flex-grow: 1;
+}
+
 header {
     position: fixed;
     top: 0;
