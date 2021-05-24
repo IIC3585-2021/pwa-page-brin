@@ -1,0 +1,38 @@
+#display-title {
+    margin: 20px 0px 10px 0px;
+    color: white;
+}
+
+#display-subtitle:hover {
+    text-decoration: underline;
+}
+
+#display-subtitle {
+    color: #b8b8b8;
+    font-weight: 300;
+    margin: 5px 0px;
+}
+
+#card-container {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    max-width: 150px;
+    width: auto;
+    display: inline-block;
+    max-height: 220px;
+}
+
+#card-container:hover {
+    background-color: #282828;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
