@@ -1,6 +1,6 @@
 {
-    "name": "fakeSpotify",
-    "short_name": "Fspotify",
+    "name": "Musicfy",
+    "short_name": "Musicfy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",

@@ -9,7 +9,7 @@ if ("serviceWorker" in navigator) {
 }
 
 function showNotification() {
-    const notification = new Notification("New message from Spoofy", {
+    const notification = new Notification("New message from Musicfy", {
         body: "Discover new artists, albums and songs!"
     })
 }
