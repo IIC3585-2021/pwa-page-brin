@@ -264,6 +264,12 @@ function fetchTracks(){
     }
 }
 
+function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  }
+
 function handleTracksResponse(){
     if ( this.status == 200 ){
         var data = JSON.parse(this.responseText);
@@ -296,6 +302,9 @@ function handleCurrentlyPlayingResponse(){
         var data = JSON.parse(this.responseText);
         console.log(data);
         is_playing = data.is_playing;
+        document.getElementById("song-duration").innerHTML = millisToMinutesAndSeconds(data.item.duration_ms);
+        document.getElementById("song-current-ms").innerHTML = millisToMinutesAndSeconds(data.progress_ms);
+        document.getElementById("myBar").style.width =  String((data.progress_ms/data.item.duration_ms)*100) + "%"
         if (is_playing) {
             document.getElementById("play-pause").onclick = pause;
         } else {

@@ -41,13 +41,13 @@
                 </div>
                 <div class="music-player">
                     <div class="music-btns">
-                        <div class="timer">01:40</div>
+                        <div id="song-current-ms" class="timer"></div>
                         <div class="btn-space">
                             <button class="btn" onclick="previous()"><i class="fa fa-step-backward" style="font-size:15px"></i></button>
                             <button id="play-pause" class="btn" onclick="play()" value="Play"><i class="fa fa-play-circle" style="font-size:15px"></i></button>
                             <button class="btn" onclick="next()"><i class="fa fa-step-forward" style="font-size:15px"></i></button>
                         </div>
-                        <div class="duration">03:04</div>
+                        <div id="song-duration" class="duration"></div>
                     </div>
                     <div id="myProgress">
                         <div id="myBar"></div>
