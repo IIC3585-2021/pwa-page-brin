@@ -48,7 +48,6 @@ document.getElementById('search-button').onclick = () => {
 
       // SEARCH SONGS ARTISTS AND ALBUMS HERE
       let access_token = localStorage.getItem("access_token")
-      console.log(access_token);
       let xhr = new XMLHttpRequest();
       xhr.open("GET", SEARCH + `?q=${toSearch}&type=track%2Cartist%2Calbum&market=US&limit=10&offset=5`, true);
       xhr.setRequestHeader('Content-Type', 'application/json');
@@ -57,15 +56,33 @@ document.getElementById('search-button').onclick = () => {
         if (xhr.readyState == 4) {
           if (xhr.status == 200) {
             let data = JSON.parse(xhr.responseText);
-            console.log(data);
             data.artists.items.forEach(e => {
-              showResultArtists(e)
+              console.log(e)
+              const container = document.getElementById('artist-collection');
+              const newElement = document.createElement('content-display');
+              newElement.setAttribute('title', e.name);
+              // newElement.setAttribute('subtitle', e.artists[0].name);
+              if (e.images.length > 0) {
+                newElement.setAttribute('imagelink', e.images[0].url);
+              }
+              container.appendChild(newElement);
             });
             data.albums.items.forEach(e => {
-              showResultAlbums(e)
+              const container = document.getElementById('album-collection');
+              const newElement = document.createElement('content-display');
+              newElement.setAttribute('title', e.name);
+              newElement.setAttribute('subtitle', e.artists[0].name);
+              newElement.setAttribute('imagelink', e.images[0].url);
+              container.appendChild(newElement);
             });
             data.tracks.items.forEach(e => {
-              showResultSongs(e)
+              // showResultSongs(e)
+              const container = document.getElementById('song-collection');
+              const newElement = document.createElement('content-display');
+              newElement.setAttribute('title', e.name);
+              newElement.setAttribute('subtitle', e.artists[0].name);
+              newElement.setAttribute('imagelink', e.album.images[0].url);
+              container.appendChild(newElement);
             });
           }
           else {
@@ -83,8 +100,8 @@ document.getElementById('home-button').onclick = () => {
   switchTo('home');
 };
 
-// if (navigator.serviceWorker) {
-//   window.addEventListener('load', () => {
-//     currentlyPlaying();
-//   });
-// }
+if (navigator.serviceWorker) {
+  window.addEventListener('load', () => {
+    currentlyPlaying();
+  });
+}
