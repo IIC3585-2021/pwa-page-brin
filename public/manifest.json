@@ -1,16 +1,28 @@
 {
-    "name": "fakeSpotify",
-    "short_name": "Fspotify",
+    "name": "Musicfy",
+    "short_name": "Musicfy",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#8e549c",
     "icons": [
         {
-            "src": "images/logo192.png",
+            "src": "../images/logo192.png",
             "sizes": "192x192",
-            "type": "images/png"
+            "type": "images/png",
+            "purpose": "any"
         },
         {
-            "src": "images/logo512.png",
+            "src": "../images/logo512.png",
             "sizes": "512x512",
-            "type": "images/png"
+            "type": "images/png",
+            "purpose": "any"
+        },
+        {
+            "src": "../images/logo144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
         }
     ]
 }
