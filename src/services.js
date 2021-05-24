@@ -15,6 +15,7 @@ var devices = [];
 var playlists = [];
 var tracks = [];
 var radioButtons = [];
+var is_playing;
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
@@ -206,14 +207,7 @@ function removeAllItems( elementId ){
 }
 
 function play(){
-    let playlist_id = currentPlaylist;
-    let trackindex = currentTrack;
     let body = {};
-    body.context_uri = "spotify:playlist:" + playlist_id;
-    body.offset = {};
-    body.offset.position = trackindex.length > 0 ? Number(trackindex) : 0;
-    body.offset.position_ms = 0;
-    console.log("BODY", body);
     callApi( "PUT", PLAY + "?device_id=" + deviceId(), JSON.stringify(body), handleApiResponse );
 }
 
@@ -301,6 +295,13 @@ function handleCurrentlyPlayingResponse(){
     if ( this.status == 200 ){
         var data = JSON.parse(this.responseText);
         console.log(data);
+        is_playing = data.is_playing;
+        position_ms = data.progress_ms;
+        if (is_playing) {
+            document.getElementById("play-pause").onclick = pause;
+        } else {
+            document.getElementById("play-pause").onclick = play; 
+        }
         if ( data.item != null ){
             document.getElementById("albumImage").src = data.item.album.images[0].url;
             document.getElementById("trackTitle").innerHTML = data.item.name;
