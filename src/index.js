@@ -33,19 +33,19 @@ const switchTo = (view) => {
   includeHTML();
 };
 
-document.getElementById('search-button').onclick = () => {
-  console.log('SWITCH TO SEARCH!');
-  switchTo('search');
-};
+// document.getElementById('search-button').onclick = () => {
+//   console.log('SWITCH TO SEARCH!');
+//   switchTo('search');
+// };
 
-document.getElementById('home-button').onclick = () => {
-  console.log('SWITCH TO HOME!');
-  switchTo('home');
-};
+// document.getElementById('home-button').onclick = () => {
+//   console.log('SWITCH TO HOME!');
+//   switchTo('home');
+// };
 
-window.addEventListener('load', () => {
-  currentlyPlaying();
-  // document.getElementById('my-button').onclick = () => {
-  //   document.querySelector('content-display').setAttribute('title', 'Honorary Astronaut');
-  // };
-});
+// window.addEventListener('load', () => {
+//   currentlyPlaying();
+//   // document.getElementById('my-button').onclick = () => {
+//   //   document.querySelector('content-display').setAttribute('title', 'Honorary Astronaut');
+//   // };
+// });
