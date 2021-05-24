@@ -78,7 +78,6 @@ document.getElementById('search-button').onclick = () => {
   }, 200);
 };
 
-
 document.getElementById('home-button').onclick = () => {
   console.log('SWITCH TO HOME!');
   switchTo('home');
