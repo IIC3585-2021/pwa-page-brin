@@ -22,6 +22,8 @@ document.getElementById("notify").onclick = showNotification;
 
 const mainDiv = document.getElementById('full-container');
 
+const apiUrl = 'https://api.spotify.com/v1/search';
+
 const switchTo = (view) => {
   const toRemove = mainDiv.querySelector('div');
   toRemove.remove();
@@ -33,10 +35,23 @@ const switchTo = (view) => {
   includeHTML();
 };
 
-// document.getElementById('search-button').onclick = () => {
-//   console.log('SWITCH TO SEARCH!');
-//   switchTo('search');
-// };
+
+// My own little piece of callback hell
+document.getElementById('search-button').onclick = () => {
+  console.log('SWITCH TO SEARCH!');
+  switchTo('search');
+
+  setTimeout(() => {
+    document.getElementById('accept-search-button').onclick = () => {
+      const searchBar = document.getElementById('search-bar');
+      const toSearch = searchBar.value;
+      console.log(toSearch);
+
+      // SEARCH SONGS ARTISTS AND ALBUMS HERE
+    };
+  }, 200);
+};
+
 
 // document.getElementById('home-button').onclick = () => {
 //   console.log('SWITCH TO HOME!');
