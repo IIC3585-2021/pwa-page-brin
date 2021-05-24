@@ -296,7 +296,6 @@ function handleCurrentlyPlayingResponse(){
         var data = JSON.parse(this.responseText);
         console.log(data);
         is_playing = data.is_playing;
-        position_ms = data.progress_ms;
         if (is_playing) {
             document.getElementById("play-pause").onclick = pause;
         } else {
